@@ -3,7 +3,7 @@
 namespace Rolenweb\Wpapi;
 
 use SimpleXMLElement;
-//test
+
 
 class Wp
 {
