@@ -1,6 +1,6 @@
 <?php
 
-namespace models;
+namespace Rolenweb\Wpapi;
 
 use SimpleXMLElement;
 //test

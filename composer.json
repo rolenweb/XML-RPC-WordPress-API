@@ -3,11 +3,21 @@
     "description": "XML-RPC-WordPress-API",
     "version": "1.0.0",
     "license": "MIT License",
-    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Roman Khrustalev",
+            "email": "rolenweb@yandex.ru"
+        }
+    ],
     "require": {
-        "php": ">=5.4.0"
+    	"php": ">=5.4.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
     },
     "autoload": {
-        "classmap": ["models/"]
+        "psr-4": {
+            "Rolenweb\\Wpapi\\": "src"
+        }
     }
 }
