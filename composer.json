@@ -4,6 +4,9 @@
     "version": "1.0.0",
     "license": "MIT License",
     "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0"
+    },
     "autoload": {
         "classmap": ["models/"]
     }
