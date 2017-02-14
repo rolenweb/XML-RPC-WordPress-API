@@ -1,0 +1,12 @@
+{
+    "name": "rolenweb/XML-RPC-WordPress-API",
+    "description": "XML-RPC-WordPress-API",
+    "version": "1.0.0",
+    "license": "MIT License",
+    "require": {
+        
+    },
+    "autoload": {
+        "classmap": ["models/"]
+    }
+}
