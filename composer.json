@@ -3,9 +3,6 @@
     "description": "XML-RPC-WordPress-API",
     "version": "1.0.0",
     "license": "MIT License",
-    "require": {
-        
-    },
     "minimum-stability": "stable",
     "require": {
         "php": ">=5.4.0",
