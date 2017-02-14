@@ -2,16 +2,19 @@
 xml-rpc-wordpress-api
 
 
-Usage
-------
+##Usage
 
+
+```
 use Rolenweb\Wpapi\Wp;
 
 $wp = new Wp('http://site/','login','password');
+```
 
 
-Create term:
+##Create term:
 
+```
 $content = [
     'name' => 'name',
     'taxonomy' => 'post_tag',
@@ -20,3 +23,4 @@ $content = [
     //'parent' => null,
 ];
 $wp->newTerm($content);
+```
