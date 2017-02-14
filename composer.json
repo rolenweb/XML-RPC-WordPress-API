@@ -1,7 +1,7 @@
 {
     "name": "rolenweb/xml-rpc-wordpress-api",
     "description": "XML-RPC-WordPress-API",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "license": "MIT License",
     "authors": [
         {
