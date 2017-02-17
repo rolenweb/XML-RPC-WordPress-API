@@ -38,6 +38,15 @@ class Wp
         return $this->convertResponseArray($response);
     }
 
+    public function newPost($content)
+    {   
+        $params = array(1, $this->login, $this->pass, $content);
+        
+        $response = $this->xmlRpc($params,'wp.newPost');
+
+        return $this->convertResponseArray($response);
+    }
+
     public function xmlRpc($params,$action)
     {
         // initialize curl

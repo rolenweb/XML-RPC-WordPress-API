@@ -1,5 +1,5 @@
 # xml-rpc-wordpress-api
-xml-rpc-wordpress-api
+https://codex.wordpress.org/XML-RPC_WordPress_API
 
 
 ##Usage
@@ -23,4 +23,26 @@ $content = [
     //'parent' => null,
 ];
 $wp->newTerm($content);
+```
+
+##Create post:
+```
+$content = [
+	'post_type' => 'post',
+    'post_content' => null,
+    'post_title' => 'title',
+    'post_status' => 'publish',
+    'ping_status' => 'closed',
+    'custom_fields' => [
+    	[
+    		'key' => 'key',
+    		'value' => 'value'
+    	],
+    	
+    	
+    ],
+
+];
+
+$wp->newPost($contentMap);
 ```
