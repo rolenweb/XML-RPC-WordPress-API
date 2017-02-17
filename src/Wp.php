@@ -72,6 +72,11 @@ class Wp
     public function convertResponseArray($xml)
     {
         $out = [];
+        if ($this->isValidXml($xml) === false) {
+            $out['error']['code'] = '500';
+            $out['error']['description'] = 'String could not be parsed as XML';
+            return  $out;
+        }
         $obj = new SimpleXMLElement($xml);
         $array = $this->extract($obj);
         
@@ -154,6 +159,25 @@ class Wp
         }
 
         return $extract;
+    }
+
+    public function isValidXml($content)
+    {
+        $content = trim($content);
+        if (empty($content)) {
+            return false;
+        }
+        //html go to hell!
+        if (stripos($content, '<!DOCTYPE html>') !== false) {
+            return false;
+        }
+
+        libxml_use_internal_errors(true);
+        simplexml_load_string($content);
+        $errors = libxml_get_errors();          
+        libxml_clear_errors();  
+
+        return empty($errors);
     }
     
 }
